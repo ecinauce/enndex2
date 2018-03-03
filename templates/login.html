@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Ennchan</title>
+</head>
+<body>
+  <h1>Login</h1>
+  <form method="post" name="login">
+    <input type="text" name="username"><br>
+    <input type="password" name="pass"><br>
+    <input type="hidden" name="login">
+    <input type="submit"></input>
+  </form>
+  
+  <h2>Register</h2>
+  <form method="post" name="register"><br>
+    <input type="text" name="username"><br>
+    <input type="password" name="password"><br>
+    <select name="type">
+      <option value="admin">Admin</option>
+      <option value="guest">Guest</option>
+      <option value="partner">User</option>
+    </select><br>
+    <input type="hidden" name="register">
+    <input type="submit">
+  </form>
+</body>
+
+</html>

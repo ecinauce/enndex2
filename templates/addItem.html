@@ -1,0 +1,16 @@
+{% extends "gallery.html" %}
+{% block addItem %}
+<form method="post">
+<fieldset>
+<legend>Add Item</legend>
+Name: <input type="text" name="itemName"><br>
+Price: <input type="text" name="itemPrice"><br>
+Type: <select name="itemType">
+  <option value="handbag">Handbag</option>
+  <option value="backpack">Backpack</option>
+  <option value="accessory">Accessory</option>
+</select><br>
+Picture: <input type="text" name="itemImg"><br>
+<input type="submit">
+</fieldset></form>
+{% endblock %}

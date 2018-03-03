@@ -1,0 +1,92 @@
+{% extends "index.html" %}
+{% block login %}
+  <span><h1>Login</h1>
+  {% if error %}
+  <strong> {{ error }} </strong>
+  {% endif %}
+  <form action="/login" method="post" name="login">
+    <input type="text" name="username"><br>
+    <input type="password" name="pass"><br>
+    <input type="hidden" name="login">
+    <input type="submit"></input>
+  </form>
+  
+  <div style="display: none;">
+  <h2>Register</h2>
+  <form action="/login" method="post" name="register"><br>
+    <input type="text" name="username"><br>
+    <input type="password" name="password"><br>
+    <select name="type">
+      <option value="admin">Admin</option>
+      <option value="guest">Guest</option>
+      <option value="partner">User</option>
+    </select><br>
+    <input type="hidden" name="register">
+    <input type="submit">
+  </form></div></span>
+{% endblock %}
+{% block content %}
+
+{% if 'username' in session %}
+<form action="/addItem" method="post">
+<fieldset>
+<legend>Add Item</legend>
+Name: <input type="text" name="itemName"><br>
+Price: <input type="text" name="itemPrice"><br>
+Type: <select name="itemType">
+  <option value="handbag">Handbag</option>
+  <option value="backpack">Backpack</option>
+  <option value="accessory">Accessory</option>
+</select><br>
+Picture: <input type="text" name="itemImg"><br>
+<input type="submit">
+</fieldset></form>
+
+{% endif %}
+<fieldset>
+<legend>Items</legend>
+{% if items|length > 0 %}
+{% if 'username' in session %}
+{% for item in items %}
+<div class="edit">
+<hr>
+<span><form id="id-{{ item['id'] }}" action="/editItem" method="post">
+<strong>ID:</strong> {{ item['id'] }}<br>
+<strong>Name:</strong> <input type="text" name="itemName" value="{{ item['name'] }}" disabled></input><br>
+<strong>Type:</strong> <select name="itemType" disabled>
+  <option value="{{ item['type'] }}" selected hidden>{{ item['type'] }}</option>
+  <option value="handbag">Handbag</option>
+  <option value="backpack">Backpack</option>
+  <option value="accessory">Accessory</option>
+</select><br>
+<strong>Price:</strong> <input type="number" name="itemPrice" value="{{ item['price'] }}" disabled></input><br>
+<strong>URL:</strong> <input type="text" name="itemImg" value="{{ item['imgurl'] }}" disabled></input><br>
+<input type="submit" value="Edit" disabled></input>
+</form>
+<form action="/delItem" method="post">
+<input type="hidden" name="itemId" value="{{ item['id'] }}">
+<input type="submit" value="Delete" disabled></form>
+</span>
+<hr>
+</div>
+{% endfor %}
+{% else %}
+{% for item in items %}
+<hr>
+<strong>ID: </strong> {{ item['id'] }}<br>
+<strong>Name: </strong> {{ item['name'] }}<br>
+<strong>Type: </strong> {{ item['type'] }}<br>
+<strong>Price: </strong> {{ item['price'] }}<br>
+<strong>URL: </strong> {{ item['imgurl'] }}<br>
+<hr>
+</form>
+{% endfor %}
+{% endif %}
+<br>
+{% else %}
+<p>There are no items in this list</p>
+{% endif %}
+</fieldset>
+</form>
+<button id="loadMore">Load More</button>
+{% endblock %}

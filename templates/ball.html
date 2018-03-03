@@ -1,0 +1,21 @@
+<head>
+<title>Catch the ball</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/ball.css') }}" />
+</head>
+<body>
+<div class="pcView">
+  <h1 class="banner">
+  Click the ball
+  </h1>
+  <h4 id="points"></h4>
+  <!--
+  ==========================
+  Wow, you're pretty desperate now, aren't you? Your program isn't going to code itself, get coding.
+  ==========================
+  -->
+  <div id="ball">
+  </div>
+</div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="{{ url_for('static', filename='js/ball.js') }}"></script>
+</body>

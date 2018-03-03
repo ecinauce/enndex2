@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  {% if username %}
+  
+  <title>{{ username }}</title>
+  
+  {% else %}
+  
+  <title>Website</title>
+  
+  {% endif %}
+  
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/index.css') }}" />
+</head>
+<body>
+  {% if username %} 
+  
+  <h1>It works, {{username}}! </h1><br> 
+  <a href="/logout">Logout</a> 
+  
+  {% else %}  
+  
+  {% block login %}{% endblock %}
+  
+  {% endif %}
+  
+  {% block content %}{% endblock %}
+  
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="{{ url_for('static', filename='js/controller.js') }}"></script>
+</body>
+
+</html>

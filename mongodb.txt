@@ -1,0 +1,9 @@
+posts
+-content
+-datetime
+-user
+
+users
+-username
+-password
+-email

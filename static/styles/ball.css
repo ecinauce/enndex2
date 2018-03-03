@@ -1,0 +1,28 @@
+@media only screen and (min-width: 1024px) {
+.banner{
+  font-family: sans-serif;
+  position:fixed;
+  left:center;
+  top:20px;
+  color:#f58;
+}
+
+#points{
+  position: fixed;
+  top: 10px;
+  left: 10px;
+}
+
+#ball{
+  /*Wow, you're pretty desperate now, aren't you? Go back and finish whatever you're supposed to be working on, it ain't going to code itself.*/
+  position:absolute;
+  background:#aa2;
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+  left: 50vw;
+  top: 50vh;
+  border: 5px solid lime;
+  border-radius: 50px;
+}
+}

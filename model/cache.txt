@@ -1,0 +1,99 @@
+
+@application.route('/', methods=['GET','POST'])
+def index():
+  from model.factory_item import ItemFactory as _if
+  
+  iList = _if.createItemList()
+  
+  if 'username' in session:
+    return render_template("gallery.html", username=escape(session['username']))
+  return render_template("gallery.html")
+  
+@application.route('/login', methods=['GET', 'POST'])
+def login():
+  error = None
+
+  if request.method == 'POST' and 'login' in request.form:
+    from model.dbquery import doSql
+    
+    db = doSql()
+
+    query = "SELECT * FROM get_pass('"+str(request.form['username'])+"');"
+    ((
+      password
+    ),) = db.execqry(query, False)
+    try:
+      if check_password_hash(password[0], request.form['pass']):
+        from model.factory_user import UserFactory as uf
+
+        s = uf.createUserName(request.form['username'])
+        
+        session['username'] = request.form['username']
+        session['userType'] = s.userType
+        return redirect(url_for('index'))
+      else:
+        error = "Password or username is invalid"
+    except:
+      if request.form['username'] is not '':
+        error = "password or Username is invalid"
+      else:
+        error = "Username or password fields can't be left blank"
+    return render_template('gallery.html', error=error)
+    
+  if request.method == 'POST' and 'register' in request.form:
+    from model.factory_user import UserFactory as uf
+    
+    s = uf.createUser(request.form['username'], generate_password_hash(request.form['password']), request.form['type'])
+    
+    return redirect(url_for('login'))
+  return render_template("login.html")
+
+#addItem
+@application.route('/addItem', methods=['POST'])
+def addItem():
+  if request.method == 'POST' and session['userType'] == 'admin':
+    from model.factory_item import ItemFactory as _if
+
+    i = _if.createItem(request.form['itemName'], request.form['itemType'], request.form['itemPrice'], request.form['itemImg'])
+    return redirect(url_for("index"))
+
+#getItem
+@application.route('/getItem/<int:index>/<int:offset>')
+def getItem(index, offset):
+  from model.factory_item import ItemFactory as _if
+
+  i = _if.createItemPage(index, offset)
+  #raise Exception(i)
+  return jsonify(i)
+    
+#editItem
+@application.route('/editItem', methods=['POST'])
+def editItem():
+  if request.method == 'POST' and session['userType'] == 'admin':
+    from model.factory_item import ItemFactory as _if
+    from model.class_item import Item
+
+    i = Item()
+    i.setId(request.form['itemId'])
+    i.setName(request.form['itemName'])
+    i.setType(request.form['itemType'])
+    i.setPrice(request.form['itemPrice'])
+    i.setImg(request.form['itemImg'])
+    i.commit()
+    return redirect(url_for("index"))
+
+#delItem
+@application.route('/delItem', methods=['POST'])
+def delItem():
+  if request.method == 'POST' and session['userType'] == 'admin':
+    from model.class_item import Item
+
+    i = Item()
+    i.setId(request.form['itemId'])
+    i.delete()
+    return redirect(url_for("index"))
+  
+@application.route('/logout')
+def logout():
+    session.pop('username', None)
+    return redirect(url_for('index')) 
