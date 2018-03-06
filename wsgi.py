@@ -13,6 +13,10 @@ def ball():
 
 @application.route('/')
 def index():
+  return render_template('slate.html')
+  
+@application.route('/testimonial')
+def testimonial():
   from model.factory_post import PostFactory as pf
     
   postList = pf.createPostSection(1, 4)

@@ -19,29 +19,19 @@ function isNear( element, distance, event ) {
 var points = 0;
 var speed = 1000;
 
-setInterval(function(){
-if ($(window).width() > 1024){
-  $(".pcView").show();
-  $(".mobileView").hide();
-  $(document).bind('mousemove', function(e){
-      if (isNear($("#ball"),20,e)){
-        $("#ball").animate({
-          left: getRandomInt(0,$(window).width()),
-          top: getRandomInt(0,$(window).height())
-        }, 200);
-        $(".banner").text("Catch the ball :)");
-      }
+$(document).bind('mousemove', function(e){
+  if (isNear($("#ball"),20,e)){
+    $("#ball").animate({
+      left: getRandomInt(0,$(window).width()),
+      top: getRandomInt(0,$(window).height())
+      }, 200);
+    $(".banner").text("Catch the ball :)");
+  }
   });
-} else {
-  
-  $(".pcView").hide();
-  $(".mobileView").show();
-}
-},200);
 
 $("#ball").on('click',function(e){
   alert("Congratulations! You just WON the game!");
-  $.get('http://ennchan.ga/');
+  $(location).attr("href","/");
   /*points++;
   speed-=100;
   ("#ball").remove();

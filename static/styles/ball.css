@@ -4,7 +4,7 @@
   position:fixed;
   left:center;
   top:20px;
-  color:#f58;
+  color:rgba(150,0,0,0.0);
 }
 
 #points{
@@ -25,4 +25,18 @@
   border: 5px solid lime;
   border-radius: 50px;
 }
+
+.mobile{
+  color:rgba(150,0,0,1.0);
+}
+
+}
+
+.banner{
+  color:rgba(150,0,0,1.0);
+}
+
+.mobile{
+  color:rgba(150,0,0,0.0);
+  content: "Sorry, right now this is only available in the PC version :(";
 }
