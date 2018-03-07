@@ -9,7 +9,6 @@ class MongoUserFactory(object):
     invokeDb = doMongo()
     db = invokeDb.client
     
-    
     thisDb = db.ennchandb
     userTable = thisDb.user
     result = userTable.insert({"username":p_username,"password":p_password,"email":p_email})
