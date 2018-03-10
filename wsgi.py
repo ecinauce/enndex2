@@ -8,6 +8,7 @@ application.secret_key = 'A0Zr98j/3yX R~XHH!jmN]LWX/,?RT'
 #application.secret_key = os.urandom(24)
 
 @application.route('/privacy/')
+def privacy():
   return render_template('Facebook: I wanted to remove the login feature from the app, but unfortunately the users cant. A google search to stack overflow said so. But anyways, privacy policy, I will not store information, the main purpose for the Facebook app "Ennchan" is for self-education and exploration.')
 
 @application.route('/ball/')
