@@ -7,6 +7,9 @@ application = Flask(__name__)
 application.secret_key = 'A0Zr98j/3yX R~XHH!jmN]LWX/,?RT'
 #application.secret_key = os.urandom(24)
 
+@application.route('/privacy/')
+  return render_template('Facebook: I wanted to remove the login feature from the app, but unfortunately the users cant. A google search to stack overflow said so. But anyways, privacy policy, I will not store information, the main purpose for the Facebook app "Ennchan" is for self-education and exploration.')
+
 @application.route('/ball/')
 def ball():
   return render_template('ball.html')
@@ -91,6 +94,6 @@ def getPost():
   
 if __name__ == "__main__":
   #Deployment script
-  application.run(host='0.0.0.0', port=8080)
+  #application.run(host='0.0.0.0', port=8080)
   #Development script
-  #application.run(host='localhost', port=80, debug=True)
+  application.run(host='localhost', port=80, debug=True)

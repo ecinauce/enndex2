@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Nicolo Lynsu "Ennchan" Ecuacion</title>
+  <title>Nick "Ennchan" Software Services</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='styles/bootstrap.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/slick-theme.css') }}" />
 </head>
 <body>
 <div class="jumbotron jumbotron-fluid">
-  <div class="container-fluid">
-    <h1>Nicolo Lynsu "Ennchan" Ecuacion</h1>  
+  <div class="container-fluid text-center">
+    <div class="display-3 lead">Nick "Ennchan" Software Services</div>
+      <p><a href="http://jquery.com">jQuery</a> | <a href="https://getbootstrap.com">Bootstrap</a> | <a href="https://postgresql.org">PostgreSQL</a> | <a href="https://mongodb.com">MongoDB</a> | <a href="http://flask.pocoo.org">Flask</a> | <a href="http://lettuce.it">Lettuce</a> | <a href="https://pillow.readthedocs.io">PIL</a> | <a href="https://opencv.org">OpenCV</a> | <a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">BeautifulSoup</a>
   </div>
 </div>
 
 <div class="container">
   <div class="row">
-    <div class="col-12">
-    <h2>About</h2>
-    <p>Hi, I'm a freelance Software Developer. I have experience on several front end and back end web development projects, usually using flask, bootstrap, and jquery. You can check most of my work here, or visit <a href="http://ennchan.wordpress.com/">my developer's blog</a> for more information.</p>
+    <div class="col-12 text-justify">
+    <p>Hi, I'm a freelance Software Developer. I have experience on several front end and back end web development projects, usually using flask, bootstrap, and jquery. You can check most of my work here or  <a href="http://github.com/ecinauce">in github</a>, or visit <a href="http://ennchan.wordpress.com/">my developer's blog</a> for more information.</p>
     </div>
     <div class="col">
       <h2>Projects</h2>
@@ -104,6 +105,8 @@
   
   <script src="{{ url_for('static', filename='js/jquery-3.3.1.js') }}"></script>
   <script src="{{ url_for('static', filename='js/bootstrap.bundle.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/slick.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/controller.js') }}"></script>
   
 </body>
 </html>

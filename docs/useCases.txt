@@ -1,0 +1,22 @@
+[project repository]
+project has:
+type
+technologies
+date
+source
+docs
+
+Tools:
+role
+technology
+type
+
+Use Cases:
+  Link to MongoDB
+  Admin only:
+    CRUD Projects
+    CRUD Tools
+  
+  View projects by tag
+  View tools by tag
+  

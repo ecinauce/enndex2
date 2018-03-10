@@ -1,21 +1,22 @@
 <NotepadPlus>
     <Session activeView="1">
-        <mainView activeIndex="0">
-            <File firstVisibleLine="0" xOffset="0" scrollWidth="936" startPos="0" endPos="0" selMode="0" lang="Javascript" encoding="-1" filename="D:\Git\enndex2\static\js\anims.js" />
+        <mainView activeIndex="4">
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="2472" startPos="152" endPos="152" selMode="0" lang="Javascript" encoding="-1" filename="D:\Git\enndex2\static\js\anims.js" />
             <File firstVisibleLine="0" xOffset="0" scrollWidth="936" startPos="0" endPos="0" selMode="0" lang="Javascript" encoding="-1" filename="D:\Git\enndex2\static\js\ball.js" />
-            <File firstVisibleLine="0" xOffset="0" scrollWidth="936" startPos="179" endPos="179" selMode="0" lang="Javascript" encoding="-1" filename="D:\Git\enndex2\static\js\controller.js" />
+            <File firstVisibleLine="157" xOffset="0" scrollWidth="2888" startPos="4405" endPos="4405" selMode="0" lang="Javascript" encoding="-1" filename="D:\Git\enndex2\static\js\controller.js" />
             <File firstVisibleLine="0" xOffset="0" scrollWidth="936" startPos="125" endPos="125" selMode="0" lang="CSS" encoding="-1" filename="D:\Git\enndex2\static\styles\ball.css" />
-            <File firstVisibleLine="0" xOffset="0" scrollWidth="936" startPos="116" endPos="116" selMode="0" lang="CSS" encoding="-1" filename="D:\Git\enndex2\static\styles\anims.css" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="2888" startPos="191" endPos="191" selMode="0" lang="CSS" encoding="-1" filename="D:\Git\enndex2\static\styles\anims.css" />
         </mainView>
-        <subView activeIndex="0">
-            <File firstVisibleLine="0" xOffset="0" scrollWidth="1008" startPos="0" endPos="0" selMode="0" lang="HTML" encoding="-1" filename="D:\Git\enndex2\templates\addItem.html" />
+        <subView activeIndex="8">
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="376" startPos="80" endPos="80" selMode="0" lang="HTML" encoding="-1" filename="D:\Git\enndex2\templates\addItem.html" />
             <File firstVisibleLine="0" xOffset="0" scrollWidth="1" startPos="0" endPos="0" selMode="0" lang="HTML" encoding="-1" filename="D:\Git\enndex2\templates\ball.html" />
             <File firstVisibleLine="0" xOffset="0" scrollWidth="1" startPos="0" endPos="0" selMode="0" lang="HTML" encoding="-1" filename="D:\Git\enndex2\templates\dot.html" />
             <File firstVisibleLine="0" xOffset="0" scrollWidth="1" startPos="0" endPos="0" selMode="0" lang="HTML" encoding="-1" filename="D:\Git\enndex2\templates\gallery.html" />
-            <File firstVisibleLine="0" xOffset="0" scrollWidth="1" startPos="0" endPos="0" selMode="0" lang="HTML" encoding="-1" filename="D:\Git\enndex2\templates\index.html" />
-            <File firstVisibleLine="0" xOffset="0" scrollWidth="1" startPos="0" endPos="0" selMode="0" lang="HTML" encoding="-1" filename="D:\Git\enndex2\templates\indexbk.html" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="1400" startPos="53" endPos="55" selMode="0" lang="HTML" encoding="-1" filename="D:\Git\enndex2\templates\indexbk.html" />
             <File firstVisibleLine="0" xOffset="0" scrollWidth="1" startPos="0" endPos="0" selMode="0" lang="HTML" encoding="-1" filename="D:\Git\enndex2\templates\login.html" />
             <File firstVisibleLine="0" xOffset="0" scrollWidth="1008" startPos="0" endPos="0" selMode="0" lang="HTML" encoding="-1" filename="D:\Git\enndex2\templates\test.html" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="1456" startPos="0" endPos="0" selMode="0" lang="HTML" encoding="-1" filename="D:\Git\enndex2\templates\index.html" />
+            <File firstVisibleLine="8" xOffset="0" scrollWidth="3648" startPos="500" endPos="500" selMode="0" lang="HTML" encoding="-1" filename="D:\Git\enndex2\templates\slate.html" />
         </subView>
     </Session>
 </NotepadPlus>
