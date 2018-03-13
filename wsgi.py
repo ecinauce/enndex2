@@ -27,7 +27,7 @@ def index():
   wewCol.insert({"status":"OK"})
   out = wewCol.find_one()
   
-  return render_template('slate.html', _print = [os.getenv('DP'),os.getenv('DU'),os.getenv('DN')])
+  return render_template('slate.html')
   
 @application.route('/testimonial')
 def testimonial():
