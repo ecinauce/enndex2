@@ -19,9 +19,9 @@ def ball():
 def index():
   from pymongo import MongoClient
   
-  wew = MongoClient('mongodb://userUIA:8YhwyYPaUmfH4Khx@172.30.220.39:27017/ennchandb')
+  wew = MongoClient('mongodb://userUIA:8YhwyYPaUmfH4Khx@mongodb:27017/ennchandb')
   
-  wewDb = wew.db
+  wewDb = wew.ennchandb
   wewCol = wewDb.col
   wewCol.insert({"status":"OK"})
   out = wewCol.find_one()
