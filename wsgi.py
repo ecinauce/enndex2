@@ -18,6 +18,7 @@ def ball():
 @application.route('/')
 def index():
   from pymongo import MongoClient
+  import os
   
   wew = MongoClient('mongodb://userUIA:8YhwyYPaUmfH4Khx@mongodb:27017/ennchandb')
   
@@ -26,7 +27,7 @@ def index():
   wewCol.insert({"status":"OK"})
   out = wewCol.find_one()
   
-  return render_template('slate.html', _print = out)
+  return render_template('slate.html', _print = [os.getenv('DP'),os.getenv('DU'),os.getenv('DN')])
   
 @application.route('/testimonial')
 def testimonial():
