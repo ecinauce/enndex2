@@ -19,7 +19,7 @@ def ball():
 def index():
   from pymongo import MongoClient
   
-  wew = MongoClient('mongodb://userUIA:8YhwyYPaUmfH4Khx@mongodb/ennchandb')
+  wew = MongoClient('mongodb://userUIA:8YhwyYPaUmfH4Khx@mongodb:27017/ennchandb')
   
   wewDb = wew.db
   wewCol = wewDb.col
