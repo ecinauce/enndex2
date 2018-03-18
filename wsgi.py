@@ -22,7 +22,7 @@ def index():
   #wew = MongoClient('mongodb://userUIA:8YhwyYPaUmfH4Khx@mongodb:27017/ennchandb')
   return render_template('slate.html')
   
-@application.route('/testimonial')
+@application.route('/testimonial/')
 def testimonial():
   from model.factory_post import PostFactory as pf
     
@@ -98,6 +98,6 @@ def getPost():
   
 if __name__ == "__main__":
   #Deployment script
-  #application.run(host='0.0.0.0', port=8080)
+  application.run(host='0.0.0.0', port=8080)
   #Development script
-  application.run(host='localhost', port=80, debug=True)
+  #application.run(host='localhost', port=80, debug=True)
