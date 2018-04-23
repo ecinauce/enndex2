@@ -1,0 +1,14 @@
+[X](?) I need a nice-looking 'portfolio'
+  - Design the web page front end
+
+I want to be able to manage my projects.
+  - CRUD projects
+  - Display project by tags
+  
+I need a contract page.
+  - Terms and conditions
+  - privacy policy
+  
+I want to be able to manage my skillset
+  - CRUD skill set
+  - tag projects with skillset

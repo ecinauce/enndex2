@@ -169,3 +169,4 @@ $("#login").on('click',function(e){
   return false;
 });
 
+$(".carouSlick").slick();

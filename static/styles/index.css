@@ -1,12 +1,23 @@
-/*!
-* Ennstrap 0.0.1-alpha (https://ennchan.ga)
-* Copyright 2018 The Ennstrap Author
-* Copyright 2018 Twatter, Inc.
-*/
+/*.bgPrim0 { background: #668CE3 }
+.bgPrim1 { background: #C6D2EF }
+.bgPrim2 { background: #94ADE6 }
+.bgPrim3 { background: #3F72E9 }
+.bgPrim4 { background: #1A5BF1 }
 
-.edit {
-}
+.colPrim0 { color: #668CE3 }
+.colPrim1 { color: #C6D2EF }
+.colPrim2 { color: #94ADE6 }
+.colPrim3 { color: #3F72E9 }
+.colPrim4 { color: #1A5BF1 }*/
 
-.regItem{
-  background: #00FF00;
-}
+.bgPrim0 { background: #254AA0   }
+.bgPrim1 { background: #E0E6F3  }
+.bgPrim2 { background: #5C79B9   }
+.bgPrim3 { background: #0B296F   }
+.bgPrim4 { background: #010D29   }
+
+.colPrim0 { color: #254AA0   }
+.colPrim1 { color: #E0E6F3  }
+.colPrim2 { color: #5C79B9   }
+.colPrim3 { color: #0B296F   }
+.colPrim4 { color: #010D29   }
